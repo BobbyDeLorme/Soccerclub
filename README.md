@@ -174,26 +174,28 @@ And injuryType IN ("Knee")
 + -------------- + ------------- +
 2 rows
 
-Query 4: Find the names and teamID’s of team staff members that have a job title of Marketing and have last names that end in ‘n’:
+Query 4: Find the names and teamID’s of team staff members that have a job title of Marketing and have the last name Anderson:
 
-Justification:
+Justification: We have an HR complaint for a person in the marketing department with the last name of Anderson 
 
 Execute:
 > Select staffFname, staffLname, teamID
 From Team_Staff, Teams
 Where Teams.teamID = Team_Staff.Teams_teamID 
 And title IN ("Marketing")
-And staffLname regexp "n$"
+And staffLname regexp "Anderson"
 
 + --------------- + --------------- + ----------- +
 | staffFname      | staffLname      | teamID      |
 + --------------- + --------------- + ----------- +
-| David           | Anderson        | 1           |
-| Jaquelyn        | Williamson      | 1           |
+| David           | Anderson        | 1           |     
 + --------------- + --------------- + ----------- +
-2 rows
+1 row
+
 
 Query 5: Find the names and salaries of defense coaches whose salaries are greater than the average salaries of the team staff members
+
+Justification: Our Club would like to see if we are valuing our average defense coaches more than the average of all our coaches
 
 Execute:
 > Select coachFname, coachLname, salary
@@ -228,7 +230,9 @@ And injuryType regexp "Ankle|Foot"
 + ---------------- + ------------- + -------------- + --------------- +
 2 rows
 
-Query 7: Lists all the players in the club that are from Brazil, this is for a simple 
+Query 7: Lists all the players in the club that are from Brazil, this is for a simple
+
+Justification: The Brazillian national team has a series of games coming up and the team sees which players may potentially have to miss club games for international games.
 
 Execute:
 > Select firstName, lastName, playerID, teamID
