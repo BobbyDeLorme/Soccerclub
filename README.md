@@ -41,7 +41,7 @@ The database project will be crucial for us to manage these aspects effectively.
 
 
 ## Data Model
-<img width="454" alt="Updated Data Model" src="https://github.com/Jonathan-Gilbertson/Group-Project-Jonathan/assets/118770927/dc1b7096-060d-42e2-9a37-a87032f57f00">
+<img width="800" alt="Screen Shot 2023-11-07 at 8 56 37 PM" src="https://github.com/BobbyDeLorme/Soccerclub/assets/148248304/c6180274-a9e3-411a-9ddc-b92430708d0b">
 
 ## Data Dictionary 
 
