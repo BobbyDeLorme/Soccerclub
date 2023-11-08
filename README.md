@@ -289,6 +289,9 @@ And position IN ("Goalkeeper")
 
 Query 10: Find the number of players grouped by nationality who salaries are above the average salaries of players 
 
+Justification:
+Management was curious to see what players from which countries are being paid the most, as a way to scout and identify talent.
+
 Execute:
 > Select nationality, COUNT(*) as Number_Of_Players from Players 
 Group by nationality
@@ -317,6 +320,35 @@ Group by nationality
 | Botswana         | 1                      |
 + ---------------- + ---------------------- +
 19 rows
+
+## Database information
+
+| Type | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 |
+|------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
+| Multiple Table Join	|	| 	|	|	|	| X |	|	| X |	|
+| Traditional Subquery	|	| 	|	|	| X |	|	|	|	|	|
+| Correlated Subquery	|	| 	|	|	|	|	|	|	|	|	|
+| Group By	|	| 	|	|	|	|	|	| X |	|	|
+| Group By Having	| X | 	|	|	|	|	|	|	|	|	|
+| Multi Condition Where	|	| 	| X | X |	| X |	|	| X |	|
+| Built In Function	| X | 	|	|	| X |	|	| X |	|	|
+| Reg Exp	|	| 	|	| X | X | X | X |	|	|	|
+| Concat	|	| 	|	|	|	| X |	|	|	|	|
+
+
+
+| Type                   | Query 1 | Query 2 | Query 3 | Query 4 | Query 5 | Query 6 | Query 7 | Query 8 | Query 9 | Query 10 |
+|------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
+| Multiple Table Join   |         |         |         |         |         |   X     |         |         |   X     |          |
+| Traditional Subquery  |         |         |         |         |   X     |         |         |         |         |          |
+| Correlated Subquery   |         |         |         |         |         |         |         |         |         |          |
+| Group By              |         |         |         |         |         |         |         |   X     |         |          |
+| Group By Having       |   X     |         |         |         |         |         |         |         |         |          |
+| Multi Condition Where |         |         |   X     |   X     |         |   X     |         |         |   X     |          |
+| Built-In Function     |   X     |         |         |         |   X     |         |         |   X     |         |      X    |
+| Reg Exp               |         |         |         |   X     |   X     |   X     |   X     |         |         |          |
+| Concat                |         |         |         |         |         |   X     |         |         |         |          |
+
 
 ## Database information
 
